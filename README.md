@@ -14,3 +14,6 @@ this is a app demo,build with ionic2 & angular2!
 3 . ionic serve
 ```
 enjoy it !
+
+附:
+[ionic2 中文文档](https://github.com/Raineye/ionic2)

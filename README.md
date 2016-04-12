@@ -1,6 +1,8 @@
 # ionic2 App Demo
 this is a app demo,build with ionic2 & angular2!
 
+[demo](http://binaryify.github.io/demo/ionic2/)
+
 ![image1 (demo)](http://binaryify.github.io/images/ionic2/1.png)
 ![image2 (actionSheet)](http://binaryify.github.io/images/ionic2/2.png)
 ![image3 (alert)](http://binaryify.github.io/images/ionic2/3.png)

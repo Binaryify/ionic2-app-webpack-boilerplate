@@ -32,7 +32,7 @@ export class PageWithoutTabBar
 
     }
 
-    onPageDidEnter()
+    onPageWillEnter()
     {
 
         this.tabBarElement.style.display = 'none';

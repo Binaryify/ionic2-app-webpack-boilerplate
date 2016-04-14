@@ -8,6 +8,7 @@ import {TabsPage} from './pages/tabs/tabs';
   template: '<ion-nav [root]="rootPage"></ion-nav>',
   config: {
     mode: 'ios',
+    backButtonText:"返回"
     // tabbarPlacement: 'bottom',
     // iconMode: 'md',
   } // http://ionicframework.com/docs/v2/api/config/Config/

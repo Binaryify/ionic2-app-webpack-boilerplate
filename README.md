@@ -9,7 +9,8 @@ this is a app demo,build with ionic2 & angular2!
 ![image4 (params)](http://binaryify.github.io/images/ionic2/4.png)
 # start
 ```
-1 . git clone this repository
+0. npm install -g ionic@beta
+1 . git clone https://github.com/Binaryify/ionic2AppDemo.git
 2 . npm install or cnpm install
 3 . ionic serve
 ```

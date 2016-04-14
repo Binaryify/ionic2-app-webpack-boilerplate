@@ -24,7 +24,7 @@ export class Detail {
   init() {
     console.log('init...')
   }
-  onPageDidEnter() {
+  onPageWillEnter() {
     this.tabBarElement.style.display = 'none';
   }
   onPageWillLeave() {

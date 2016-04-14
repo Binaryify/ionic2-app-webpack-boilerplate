@@ -15,4 +15,5 @@ export class TabsPage {
     this.tab2Root = Page2;
     this.tab3Root = Page3;
   }
+
 }

@@ -13,6 +13,42 @@ this is a app demo,build with ionic2 & angular2!
 2 . npm install or cnpm install
 3 . ionic serve
 ```
+
+# hide tabs
+[website](https://forum.ionicframework.com/t/ionic2-hide-tabs/37998/5)
+
+```js
+@Page(
+{
+    templateUrl: '...',
+})
+export class PageWithoutTabBar
+{
+
+    constructor()
+    {
+
+        this.tabBarElement = document.querySelector('#tabs ion-tabbar-section');
+
+    }
+
+    onPageDidEnter()
+    {
+
+        this.tabBarElement.style.display = 'none';
+
+    }
+
+    onPageWillLeave()
+    {
+
+        this.tabBarElement.style.display = 'block';
+
+    }
+
+}
+```
+
 enjoy it !
 
 附:

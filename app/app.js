@@ -6,7 +6,11 @@ import {TabsPage} from './pages/tabs/tabs';
 
 @App({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
-  config: {} // http://ionicframework.com/docs/v2/api/config/Config/
+  config: {
+    mode: 'ios',
+    // tabbarPlacement: 'bottom',
+    // iconMode: 'md',
+  } // http://ionicframework.com/docs/v2/api/config/Config/
 })
 export class MyApp {
   static get parameters() {

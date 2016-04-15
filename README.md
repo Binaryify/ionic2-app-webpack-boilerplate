@@ -57,3 +57,7 @@ enjoy it !
 [ionic自带命令生成各种分辨率图标](http://ionichina.com/topic/54e455ab2be672f1111c01e2)
 
 [ionic2 中文文档](https://github.com/Raineye/ionic2)
+
+[angular2 资源](https://github.com/kittencup/angular2-learning-cn)
+
+[HTTP](https://github.com/kittencup/angular2-ama-cn/issues/42)

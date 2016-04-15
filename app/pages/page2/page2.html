@@ -1,4 +1,3 @@
-
 <ion-navbar *navbar>
   <ion-title>
     Tab 2
@@ -6,5 +5,10 @@
 </ion-navbar>
 
 <ion-content class="page2">
-
+  {{username}}
+  <ion-item>
+    <ion-label fixed>user</ion-label>
+    <ion-input type="text" [(ngModel)]="username"></ion-input>
+  </ion-item>
+  <button (click)="sub()">submit</button>
 </ion-content>

@@ -1,5 +1,5 @@
-# ionic2 App Demo
-this is a app demo,build with ionic2 & angular2!
+# ionic2-webpack-app-boilerplate
+this is a app boilerplate,build with ionic2 & angular2 & webpack!
 
 [demo](http://binaryify.github.io/demo/ionic2/)
 
@@ -61,3 +61,5 @@ enjoy it !
 [angular2 资源](https://github.com/kittencup/angular2-learning-cn)
 
 [HTTP](https://github.com/kittencup/angular2-ama-cn/issues/42)
+
+[Browserify vs. webpack](https://forum.ionicframework.com/t/ionic-2-projects-updating-to-beta-4/49054)

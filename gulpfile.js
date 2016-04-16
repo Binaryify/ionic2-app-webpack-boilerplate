@@ -2,10 +2,9 @@ var gulp = require('gulp'),
     gulpWatch = require('gulp-watch'),
     del = require('del'),
     runSequence = require('run-sequence'),
-		uglify=require('gulp-uglify'),
     argv = process.argv;
 
-var destPath='../build/yunguba-ionic';
+
 /**
  * Ionic hooks
  * Add ':before' or ':after' to any Ionic project command name to run the specified
@@ -28,7 +27,8 @@ gulp.task('run:before', [shouldWatch ? 'watch' : 'build']);
  * changes, but you are of course welcome (and encouraged) to customize your
  * build however you see fit.
  */
-var buildBrowserify = require('ionic-gulp-browserify-es2015');
+// var buildBrowserify = require('ionic-gulp-browserify-es2015');
+var buildWebpack = require('ionic-gulp-webpack');
 var buildSass = require('ionic-gulp-sass-build');
 var copyHTML = require('ionic-gulp-html-copy');
 var copyFonts = require('ionic-gulp-fonts-copy');
@@ -40,7 +40,8 @@ gulp.task('watch', ['clean'], function(done){
     function(){
       gulpWatch('app/**/*.scss', function(){ gulp.start('sass'); });
       gulpWatch('app/**/*.html', function(){ gulp.start('html'); });
-      buildBrowserify({ watch: true }).on('end', done);
+      // buildBrowserify({ watch: true }).on('end', done);
+      buildWebpack({ watch: true }).then(done);
     }
   );
 });
@@ -49,7 +50,8 @@ gulp.task('build', ['clean'], function(done){
   runSequence(
     ['sass', 'html', 'fonts', 'scripts'],
     function(){
-      buildBrowserify().on('end', done);
+      // buildBrowserify().on('end', done);
+      buildWebpack().then(done);
     }
   );
 });
@@ -59,20 +61,4 @@ gulp.task('fonts', copyFonts);
 gulp.task('scripts', copyScripts);
 gulp.task('clean', function(){
   return del('www/build');
-});
-
-gulp.task('clean-web',function(cb){
-	del([destPath+'/**','!'+destPath+'/.git/**'],{force:true},cb);
-})
-gulp.task('copy-web',function(){
-	gulp.src(['platforms/browser/www/**'])
-			.pipe(gulp.dest(destPath));
-});
-gulp.task('uglify',function() {
-	gulp.src('platforms/browser/www/build/js/app.bundle.js')
-	.pipe(uglify())
-	.pipe(gulp.dest(destPath+'/build/js'));
-});
-gulp.task('build-web',function(cb){
-	sequence('clean-web','copy-web','uglify',cb);
 });

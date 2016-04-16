@@ -1,6 +1,5 @@
 import {Page,Alert,NavController,ActionSheet} from 'ionic-angular';
 import {Detail} from '../detail/detail';
-
 @Page({
   templateUrl: 'build/pages/page1/page1.html'
 })
@@ -13,7 +12,6 @@ export class Page1 {
   }
 
   test(){
-    console.log(2);
     let actionSheet = ActionSheet.create({
     title: 'Modify your album',
     buttons: [

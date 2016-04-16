@@ -10,7 +10,7 @@ this is a app boilerplate,build with ionic2 & angular2 & webpack!
 # start
 ```
 0 . npm install -g ionic@beta
-1 . git clone https://github.com/Binaryify/ionic2AppDemo.git
+1 . git clone git@github.com:Binaryify/ionic2-app-webpack-boilerplate.git
 2 . npm install or cnpm install
 3 . ionic serve
 ```
